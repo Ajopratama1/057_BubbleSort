@@ -54,6 +54,29 @@ void bubbleSortArray() { // procedur untuk mengurutkan array dengan metode bubbl
 
 }
 
+void display() {
+    cout << endl;
+    cout << "=================================" << endl;
+    cout << "Element Array yang telah tersusun" << endl;
+    cout << "=================================" << endl;
+    cout << endl;
+    for (int j = 0; j < n; j++) {
+        if (j < n - 1) {
+            cout << " -->";
+        }
+    }
+    cout << endl;
+    cout << endl;
+
+    cout << "Jumlah pass = " << n - 1 << endl; // menampilkan jumlah dari pass 
+    cout << endl;
+    cout << endl;
+
+}
+
+
+
+
 
 
 
