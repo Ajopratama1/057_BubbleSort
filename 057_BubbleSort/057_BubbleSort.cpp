@@ -7,6 +7,7 @@ using namespace std;
 
 int arr[20]; // Deklarasi variabel global array a dengan ukuran 20
 int n;  // Deklarasi variabel global n untuk menyimpan banyaknya elemen array
+
 void input() {   //procedur untuk input
     while (true) {
         cout << "Masukan banyaknya elemen pada array : "; // output ke layar
@@ -29,7 +30,29 @@ void input() {   //procedur untuk input
     }
 }
 
+void bubbleSortArray() { // procedur untuk mengurutkan array dengan metode bubble sort
+    int pass = 1; // step 1
 
+    do {
+        for (int j = 0; j <= n - 1 - pass; j++) {
+            if (arr[j] > arr[j + 1]) { // step 3
+                int temp;
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+        pass = pass + 1; //step 4
+
+        cout << "\nPass" << pass - 1 << ": "; // number of pass
+        for (int k = 0; k < n; k++) {
+            cout << arr[k] << " "; // Menampilkan data pada number of pass
+
+        }
+        cout << endl;
+    } while (pass <= n - 1); //step 5
+
+}
 
 
 
